@@ -1,4 +1,6 @@
 # jack smith
+from decoder import decoder
+
 def show_menu():
     print('Menu\n'
           '-------------\n'
@@ -31,7 +33,7 @@ def main():
             encoded_password = encode(entry)
             print('Your password has been encoded and stored!')
         if selection == 2:
-            print(f'The encoded password is {encoded_password}, and the original password is {entry}.\n')
+            print(f'The encoded password is {encoded_password}, and the original password is {decoder(encoded_password)}.\n')
         if selection == 3:
             exit()
 if __name__ == '__main__':
